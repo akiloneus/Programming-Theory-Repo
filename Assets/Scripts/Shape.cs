@@ -7,6 +7,14 @@ public class Shape : MonoBehaviour
 {
     [SerializeField] protected TMP_Text text;
     [SerializeField] protected new string name;
+
+    protected GameObject mainManager;
+
+    private void Start()
+    {
+        mainManager = GameObject.Find("MainManager");
+    }
+
     // Encapculation
     public string _name
     {
@@ -20,6 +28,7 @@ public class Shape : MonoBehaviour
     public virtual void Greet()
     {
         SetTextColor();
+        _username = mainManager.GetComponent<MainManager>().username;
         text.text = $"{_name}: Hello, {_username}. Glad to meet you.";
     }
 
