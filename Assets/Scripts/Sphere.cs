@@ -9,6 +9,6 @@ public class Sphere : Shape
     public override void Greet()
     {
         SetTextColor();
-        text.text = "Get off!";
+        text.text = "Get off! You piece of *%@#! ";
     }
 }
